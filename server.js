@@ -1,3 +1,4 @@
+import "dotenv/config.js"
 import createError from 'http-errors'
 import express from 'express'
 import path from 'path'
@@ -8,6 +9,8 @@ import logger from 'morgan'
 import { router as indexRouter } from './routes/index.js'
 import { router as skillsRouter } from './routes/skills.js'
 
+// Connect to the database with Mongoose
+import './config/database.js'
 // set up app
 const app = express()
 
