@@ -1,11 +1,35 @@
-import { skills } from '../data/skills.js'
+import {Skill} from '../models/skill.js'
 
 function index(req, res) {
-  res.render('skills', {
-    skills:skills
+  Skill.find({})
+  .then(skills => {
+    res.render('skills', {
+      skills:skills
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/')
+  })
+}
+
+function newSkill(req,res){
+  res.render('skills/new')
+}
+
+function create(req,res){
+  Skill.create(req.body)
+  .then(skill => {
+    res.redirect('/skills')
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/')
   })
 }
 
 export{
-  index
+  index,
+  newSkill as new,
+  create,
 }

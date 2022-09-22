@@ -1,8 +1,8 @@
 const skills = [
-  { skillName: "Coding", type: "Professional", mastery: "Novice"},
-  { skillName: "Soccer", type: "Sport", mastery: "Advanced"},
-  { skillName: "Climbing", type: "Sport", mastery: "Novice"},
-  { skillName: "Juggling", type: "Hobby", mastery: "Intermediate"}
+  { skillName: "Coding", catergory: "Professional", mastery: "Novice", difficult: true},
+  { skillName: "Soccer", catergory: "Sport", mastery: "Advanced", difficult: false },
+  { skillName: "Climbing", catergory: "Sport", mastery: "Novice", difficult: true},
+  { skillName: "Juggling", catergory: "Hobby", mastery: "Intermediate", difficult: false}
 ]
 
 export{
